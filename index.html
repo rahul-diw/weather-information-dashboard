@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Weather Information Dashboard - Real-time weather information for cities around the world.">
+
+    <title>Weather Information Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ========================================
+     REALISTIC WEATHER ENVIRONMENT
+========================================= -->
+
+<div id="weatherEffects" class="weather-effects" aria-hidden="true">
+
+    <div class="weather-atmosphere"></div>
+
+    <div class="sun-environment">
+        <div class="sun-glow"></div>
+        <div class="sun-rays"></div>
+    </div>
+
+    <div class="cloud-environment">
+        <div class="cloud-layer cloud-layer-back"></div>
+        <div class="cloud-layer cloud-layer-middle"></div>
+        <div class="cloud-layer cloud-layer-front"></div>
+    </div>
+
+    <canvas id="weatherCanvas"></canvas>
+
+    <div id="lightningEffect" class="lightning-effect"></div>
+
+    <div class="fog-environment">
+        <div class="fog-layer fog-one"></div>
+        <div class="fog-layer fog-two"></div>
+    </div>
+
+    <!-- NIGHT ENVIRONMENT -->
+<div class="night-environment">
+
+    <div class="night-sky-glow"></div>
+
+    <div class="moon">
+        <div class="moon-light"></div>
+    </div>
+
+    <div class="stars stars-back"></div>
+    <div class="stars stars-middle"></div>
+    <div class="stars stars-front"></div>
+
+</div>
+
+</div>
+
+    <!-- =========================================
+         MAIN CONTAINER
+    ========================================== -->
+
+    <main class="main-content">
+
+        <div class="container">
+
+            <!-- =========================================
+                 HEADER
+            ========================================== -->
+
+            <header class="header">
+
+                <div class="header-status">
+                    <span class="status-dot"></span>
+                    <span>LIVE WEATHER</span>
+                </div>
+
+                <p class="eyebrow">
+                    WEATHER / 01
+                </p>
+
+                <h1>
+                    Weather Dashboard
+                </h1>
+
+                <p>
+                    Real-time weather information for cities
+                    around the world.
+                </p>
+
+            </header>
+
+
+            <!-- =========================================
+                 SEARCH SECTION
+            ========================================== -->
+
+            <section class="search-section">
+
+                <form class="search-form" id="searchForm">
+
+                    <div class="search-input-wrapper">
+
+                        <span class="search-label">
+                            CITY
+                        </span>
+
+                        <input type="text" id="cityInput" class="city-input" placeholder="Enter city name..."
+                            autocomplete="off">
+
+                    </div>
+
+                    <button type="submit" id="searchButton" class="search-button">
+                        Search
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+                <button type="button" id="locationBtn" class="location-btn">
+                    Use My Location →
+                </button>
+
+            </section>
+
+
+            <!-- =========================================
+                 LOADING MESSAGE
+            ========================================== -->
+
+            <section id="loading" class="loading-message hidden">
+
+                <p>
+                    Loading weather information...
+                </p>
+
+            </section>
+
+
+            <!-- =========================================
+                 ERROR MESSAGE
+            ========================================== -->
+
+            <section id="error" class="error-message hidden">
+
+                <p id="errorMessage">
+                    Something went wrong.
+                </p>
+
+            </section>
+
+
+            <!-- =========================================
+                 WEATHER SECTION
+            ========================================== -->
+
+            <section id="weatherSection" class="weather-section hidden">
+
+                <article class="weather-card">
+
+                    <!-- Card Header -->
+
+                    <div class="weather-card-header">
+
+                        <div>
+
+                            <span class="card-eyebrow">
+                                CURRENT CONDITIONS
+                            </span>
+
+                            <div id="weatherStatus" class="weather-live-status">
+                                <span class="status-dot"></span>
+                                LIVE
+                            </div>
+
+                        </div>
+
+                        <span class="weather-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div class="weather-location">
+
+                        <h2 id="cityName">
+                            Mumbai
+                        </h2>
+
+                        <p id="countryName">
+                            IN
+                        </p>
+
+                    </div>
+
+
+                    <!-- Weather Icon -->
+
+                    <div class="weather-icon-container">
+
+                        <img id="weatherIcon" src="" alt="Weather condition">
+
+                    </div>
+
+
+                    <!-- Temperature -->
+
+                    <div class="temperature-container">
+
+                        <h3 id="temperature">
+                            --°C
+                        </h3>
+
+                        <p id="weatherCondition">
+                            Weather condition
+                        </p>
+
+                    </div>
+
+
+                    <!-- Weather Details -->
+
+                    <div class="weather-details">
+
+                        <!-- Humidity -->
+
+                        <div class="weather-detail">
+
+                            <span class="detail-label">
+                                HUMIDITY
+                            </span>
+
+                            <span id="humidity" class="detail-value">
+                                --%
+                            </span>
+
+                        </div>
+
+
+                        <!-- Wind -->
+
+                        <div class="weather-detail">
+
+                            <span class="detail-label">
+                                WIND SPEED
+                            </span>
+
+                            <span id="windSpeed" class="detail-value">
+                                -- km/h
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Data Source -->
+
+                    <div class="weather-card-footer">
+
+                        <span>
+                            DATA SOURCE
+                        </span>
+
+                        <strong>
+                            OPENWEATHER
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =========================================
+                 FORECAST SECTION
+                 
+                 We are keeping this structure ready.
+                 JavaScript will be connected later.
+            ========================================== -->
+
+            <section id="forecastSection" class="forecast-section hidden">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            WEATHER OUTLOOK
+                        </span>
+
+                        <h2>
+                            5-Day Forecast
+                        </h2>
+
+                    </div>
+
+                    <span class="forecast-label">
+                        NEXT 5 DAYS
+                    </span>
+
+                </div>
+
+
+                <div id="forecastContainer" class="forecast-container">
+
+                    <!-- Forecast cards will be generated
+                         dynamically using JavaScript -->
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================================
+                 RECENT SEARCHES
+                 
+                 Structure ready for later.
+            ========================================== -->
+
+            <section id="recentSearches" class="recent-searches hidden">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="card-eyebrow">
+                            HISTORY
+                        </span>
+
+                        <h2>
+                            Recent Searches
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div id="recentSearchList" class="recent-search-list">
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                WEATHER INFORMATION DASHBOARD
+            </p>
+
+            <span>
+                Built with HTML · CSS · JavaScript · OpenWeather API
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
