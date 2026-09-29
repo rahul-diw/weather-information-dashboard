@@ -127,7 +127,7 @@ Weather Data
   │
   ▼
 Dynamic Dashboard
-
+```
 ## Security
 
 The OpenWeather API key is stored as an environment variable on the backend.
@@ -169,4 +169,3 @@ weather-information-dashboard/
 ├── .gitignore
 ├── index.html
 └── README.md
-
