@@ -198,4 +198,7 @@ http://localhost:5000
 
 Open index.html using a local development server such as VS Code Live Server.
 
+## Screenshots
+# Main Dashboard
+<img width="1920" height="1080" alt="{FFDD37C2-A566-4B14-B219-06171E505C64}" src="https://github.com/user-attachments/assets/a09e7648-0ea8-4e1a-982d-49203ad01ede" />
 
