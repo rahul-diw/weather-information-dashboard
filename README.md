@@ -1,4 +1,4 @@
-# 🌦️ Weather Information Dashboard
+#  Weather Information Dashboard
 
 A responsive and modern Weather Information Dashboard that provides real-time weather information for cities around the world.
 
