@@ -4,7 +4,7 @@ A responsive and modern Weather Information Dashboard that provides real-time we
 
 The application uses the OpenWeather API through a Node.js and Express backend and provides a cinematic weather experience with dynamic environmental effects based on current weather conditions.
 
-## 🚀 Live Demo
+## Live Demo
 
 **Frontend:**  
 https://weather-information-dashboard-1.onrender.com
@@ -14,19 +14,19 @@ https://weather-information-dashboard-c3ga.onrender.com
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🌍 Weather Search
+###  Weather Search
 - Search for weather information by city name.
 - Displays real-time weather data.
 - Handles invalid city searches and API errors.
 
-### 📍 Current Location
+###  Current Location
 - Uses browser geolocation to detect the user's current coordinates.
 - Fetches current weather using latitude and longitude.
 - Displays the corresponding weather forecast.
 
-### 🌡️ Current Weather
+###  Current Weather
 Displays:
 
 - Temperature
@@ -36,31 +36,31 @@ Displays:
 - Wind speed
 - Location information
 
-### 📅 5-Day Forecast
+###  5-Day Forecast
 - Displays upcoming weather conditions.
 - Shows temperature and weather condition for each day.
 - Works with both city search and current-location weather.
 
-### 🕘 Recent Searches
+###  Recent Searches
 - Stores recently searched cities using LocalStorage.
 - Prevents duplicate entries.
 - Keeps the latest searches.
 - Allows users to quickly search a previously searched city.
 - Includes a Clear History option.
 
-### 🌧️ Dynamic Weather Environment
+###  Dynamic Weather Environment
 
 The dashboard changes its visual environment according to the current weather.
 
 Supported conditions include:
 
-- ☀️ Clear weather
-- ☁️ Cloudy weather
-- 🌧️ Rain
-- ⛈️ Thunderstorm
-- ❄️ Snow
-- 🌫️ Mist / Fog / Haze
-- 🌙 Night environment
+-  Clear weather
+-  Cloudy weather
+-  Rain
+-  Thunderstorm
+-  Snow
+-  Mist / Fog / Haze
+-  Night environment
 
 The interface includes animated environmental effects such as:
 
@@ -73,7 +73,7 @@ The interface includes animated environmental effects such as:
 - Day/night atmosphere
 - Dynamic weather backgrounds
 
-### 📱 Responsive Design
+###  Responsive Design
 
 The dashboard is designed to work across:
 
@@ -83,7 +83,7 @@ The dashboard is designed to work across:
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 ### Frontend
 - HTML5
@@ -107,7 +107,7 @@ The dashboard is designed to work across:
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 ```text
 User
