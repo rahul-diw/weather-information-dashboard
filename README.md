@@ -169,3 +169,8 @@ weather-information-dashboard/
 ├── .gitignore
 ├── index.html
 └── README.md
+
+├── .env.example
+├── .gitignore
+├── index.html
+└── README.md
