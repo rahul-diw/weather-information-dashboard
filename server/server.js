@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.get("/api/weather", async (req, res) => {
     try {
@@ -100,6 +100,6 @@ app.get("/api/forecast", async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Weather server running on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Weather server running on port ${PORT}`);
 });
