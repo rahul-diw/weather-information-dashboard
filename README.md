@@ -202,3 +202,90 @@ Open index.html using a local development server such as VS Code Live Server.
 # Main Dashboard
 <img width="1920" height="1080" alt="{FFDD37C2-A566-4B14-B219-06171E505C64}" src="https://github.com/user-attachments/assets/a09e7648-0ea8-4e1a-982d-49203ad01ede" />
 
+# Current Weather
+<img width="1920" height="1080" alt="{FCCB9CAE-D179-4AC3-BDFF-5E0729A4BBEE}" src="https://github.com/user-attachments/assets/8d2b3bdc-38be-48ae-871e-9ccd81ad64d8" />
+
+# 5-Day Forecast
+<img width="1920" height="1080" alt="{60427DF1-CE52-46EF-87CC-0DFCA358B5B3}" src="https://github.com/user-attachments/assets/476feb4c-56f9-41b1-a10b-9d24eb96b285" />
+
+# Dynamic Weather Environment
+<img width="1920" height="1080" alt="{1215E303-C1DB-421C-AF39-A241D73607AA}" src="https://github.com/user-attachments/assets/004b3a1f-75dc-4e6e-8702-4fe60ed512bd" />
+
+# Current Location
+<img width="1920" height="1080" alt="{8B370B90-A259-468E-8C3E-1D4410F4B6C5}" src="https://github.com/user-attachments/assets/18623fa2-3b7b-4224-8b08-589f37828a00" />
+
+# Mobile Responsive View 
+<img width="375" height="812" alt="{7F92E413-2E45-4797-9D8B-DD8212E54F36}" src="https://github.com/user-attachments/assets/60b4cd8c-10a7-4ad3-9591-8660635f3bbb" />
+
+## API Endpoints
+# Current Weather
+
+GET /api/weather?city={city}
+
+Example:
+
+/api/weather?city=Delhi
+
+The endpoint also supports coordinates:
+
+/api/weather?lat={latitude}&lon={longitude}
+
+# 5-Day Forecast
+
+GET /api/forecast?city={city}
+
+Coordinate-based requests are also supported:
+
+/api/forecast?lat={latitude}&lon={longitude}
+
+## Application Flow
+- User searches for a city or selects Current Location.
+- Frontend sends the request to the Express backend.
+- Backend communicates with OpenWeather API.
+- Weather data is returned to the frontend.
+- Dashboard displays the current weather information.
+- Forecast data is displayed in the 5-Day Forecast section.
+- Weather conditions control the dynamic visual environment.
+- Searched cities are stored locally for quick access.
+
+## Project Objective
+
+The goal of this project was to build a responsive weather dashboard that combines real-time API data with a modern user interface and dynamic weather-based visual effects.
+
+The project also demonstrates frontend API integration, backend API handling, environment-variable security, browser geolocation, LocalStorage, responsive design and deployment.
+
+## Future Enhancements
+
+Possible future improvements include:
+
+- Weather alerts and notifications
+- Extended forecast
+- Temperature unit switching
+- More detailed weather statistics
+- Air quality information
+- Sunrise and sunset information
+- Improved accessibility
+- Progressive Web App support
+
+
+## Author
+
+Rahul Diw
+
+GitHub:
+https://github.com/rahul-diw
+
+
+### ⚠️ Ek cheez abhi mat karo
+
+README mein screenshot filenames maine **assume karke structure diya hai**:
+
+```text
+dashboard.png
+weather-details.png
+forecast.png
+weather-effects.png
+current-location.png
+mobile.png
+
+
