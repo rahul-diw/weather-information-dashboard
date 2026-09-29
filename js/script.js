@@ -14,8 +14,9 @@
 // BACKEND API
 // ========================================
 
-const API_URL = "http://localhost:5000/api/weather";
-const FORECAST_API_URL = "http://localhost:5000/api/forecast";
+const API_URL = "https://weather-information-dashboard-c3ga.onrender.com/api/weather";
+
+const FORECAST_API_URL = "https://weather-information-dashboard-c3ga.onrender.com/api/forecast";
 // ========================================
 // GET HTML ELEMENTS
 // ========================================
