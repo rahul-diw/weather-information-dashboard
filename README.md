@@ -127,3 +127,46 @@ Weather Data
   │
   ▼
 Dynamic Dashboard
+
+## Security
+
+The OpenWeather API key is stored as an environment variable on the backend.
+
+The API key is not included in the frontend JavaScript code.
+
+Environment configuration is managed using:
+
+.env
+
+Sensitive environment files and dependencies are excluded from Git using:
+
+.gitignore
+
+A sample environment configuration is provided through:
+
+.env.example
+
+## Project Structure
+weather-information-dashboard/
+│
+├── assets/
+│   └── icons/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── screenshots/
+│
+├── server/
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
+│
+├── .env.example
+├── .gitignore
+├── index.html
+└── README.md
+
