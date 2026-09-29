@@ -170,7 +170,32 @@ weather-information-dashboard/
 ├── index.html
 └── README.md
 
-├── .env.example
-├── .gitignore
-├── index.html
-└── README.md
+## Local Setup
+1. Clone the repository
+git clone https://github.com/rahul-diw/weather-information-dashboard.git
+
+2. Navigate into the project
+cd weather-information-dashboard
+
+3. Install backend dependencies
+cd server
+npm install
+
+## Configure environment variables
+
+Create a .env file in the project root:
+
+OPENWEATHER_API_KEY=your_api_key_here
+
+## Start the backend
+node server.js
+
+The backend will run locally on:
+
+http://localhost:5000
+
+## Run the frontend
+
+Open index.html using a local development server such as VS Code Live Server.
+
+
